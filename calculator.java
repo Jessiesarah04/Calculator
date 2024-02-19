@@ -1,33 +1,30 @@
-//Test program 
 import java.util.Scanner;
-public class calculator{
-    public static void diff(int num1,int num2){
+
+public class Calculator {
+    public static void main(String[] args) {
+        // Hardcoded values for demonstration
+        double num1 = 10;
+        double num2 = 5;
+
+        // Operation selection
+        char operation = '+';
+
         double result;
-        result=num1-num2;
-        System.out.println(num1+"-"+num2+" = "+result);
-    }
-    public static void main(String args[]){
-        int num1,num2,result;
-        String op;
-        Scanner Sc=new Scanner(System.in);
-        System.out.println("Enter two numbers:");
-        num1=Sc.nextInt();
-        num2=Sc.nextInt();
-        System.out.println("Enter the operations to be peformed(+,-,*,/,):");
-        op=Sc.next();
-        switch(op)
-        {
-            case"+":result=num1+num2;
-            System.out.println("Addition of two numbers:"+result);
+        switch (operation) {
+            case '+':
+                result = num1 + num2;
+                System.out.println("Result of addition: " + num1 + " + " + num2 + " = " + result);
                 break;
-            case"-":diff(num1,num2);
+            case '-':
+                result = num1 - num2;
+                System.out.println("Result of subtraction: " + num1 + " - " + num2 + " = " + result);
                 break;
-            case"*":result=num1*num2;
-            System.out.println("Product of two numbers:"+result);
+            case '*':
+                result = num1 * num2;
+                System.out.println("Result of multiplication: " + num1 + " * " + num2 + " = " + result);
                 break;
-            case"/":result=num1/num2;
-            System.out.println("division of two numbers:"+result);
-                break;
+            default:
+                System.out.println("Invalid operation.");
         }
     }
 }
